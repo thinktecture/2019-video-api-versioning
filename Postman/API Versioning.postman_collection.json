@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "86266376-4d52-4d78-878f-76e28db8f60c",
+		"name": "API Versioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Start new project",
+			"item": [
+				{
+					"name": "Get weather forecasts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/WeatherForecast",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1d581995-a736-4216-ac1c-835a1e4248cc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b21e0f74-09f2-4fe4-a51a-d938be38d5b2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2b8cf679-ea15-4eaa-8d70-678750c0a090",
+			"key": "protocol",
+			"value": "https",
+			"type": "string"
+		},
+		{
+			"id": "90922f52-eb2e-4b59-99ba-0c69334b0568",
+			"key": "host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"id": "82d73c88-4852-4a30-a45e-d50364ea1831",
+			"key": "port",
+			"value": "5001",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
