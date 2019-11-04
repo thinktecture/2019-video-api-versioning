@@ -1,6 +1,6 @@
 # Einzelschritte / Steps
 
-## Branch start-new project
+## Branch start-new-project
 
 Erzeuge ein neues WebApi Projekt, und installiere die notwendigen Abhängigkeiten von NuGet. Zur Nachvollziehbarkeit werden die SDK Version und alle Paket Versionen fest gepinnt.
 
@@ -14,3 +14,9 @@ dotnet new webapi -n ApiVersioning
 cd ApiVersioning
 dotnet add package Microsoft.AspNetCore.Mvc.Versioning -v 4.0.0
 ```
+
+## Branch add-basic-versioning
+
+Versionierungs-Funktionalität zum Startup hinzugefügt und dem Standard-Controller über ein Attribut die Version 1.0 zugewiesen.
+
+Added versioning functionality to startup and used an attribute to assign version 1.0 to the default controller.
