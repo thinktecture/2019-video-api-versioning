@@ -26,7 +26,10 @@ namespace ApiVersioning
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddApiVersioning();
+            services.AddApiVersioning(c =>
+            {
+                c.ReportApiVersions = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

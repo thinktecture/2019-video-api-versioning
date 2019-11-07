@@ -32,3 +32,14 @@ English:
 1. Added versioning functionality to startup and used an attribute to assign version 1.0 to the default controller.
 2. Added two new Sample controllers with versioned endpoints.
 3. Added a new controller with two different versions of the same endpoint.
+
+## Branch configure-api-versioning
+
+Deutsch:
+
+1. ReportApiVersions anschalten, um Informationen zur Version auszugeben. 
+
+English:
+
+1. Enable reporting of api versions.
+   
