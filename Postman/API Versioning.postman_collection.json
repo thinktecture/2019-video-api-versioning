@@ -10,6 +10,21 @@
 			"item": [
 				{
 					"name": "Get weather forecasts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0d688a07-19b9-4bb8-becd-9781bae780f6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -22,6 +37,264 @@
 							"port": "{{port}}",
 							"path": [
 								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2. Add basic & default versioning",
+			"item": [
+				{
+					"name": "Get weather forecasts should return 400",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/WeatherForecast",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get weather forecasts with api version",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/WeatherForecast?api-version=1.0",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"WeatherForecast"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/Sample?api-version=1.0",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"Sample"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Version 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"2\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/Sample?api-version=2.0",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"Sample"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SameController Version",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/Example/Version?api-version=1.0",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"Example",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SameController Version 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e8b46060-721b-43f5-a4c7-e9ed8fe0819d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"2\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/Example/Version?api-version=2.0",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"Example",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2.0"
+								}
 							]
 						}
 					},
@@ -55,19 +328,19 @@
 	],
 	"variable": [
 		{
-			"id": "2b8cf679-ea15-4eaa-8d70-678750c0a090",
+			"id": "9a587863-fdab-4f19-a2f1-760f60e4f3ad",
 			"key": "protocol",
 			"value": "https",
 			"type": "string"
 		},
 		{
-			"id": "90922f52-eb2e-4b59-99ba-0c69334b0568",
+			"id": "4265e1d1-489e-40f5-92e2-5d51b5df8dec",
 			"key": "host",
 			"value": "localhost",
 			"type": "string"
 		},
 		{
-			"id": "82d73c88-4852-4a30-a45e-d50364ea1831",
+			"id": "40ebb81e-5e70-4675-b0e3-02d15baf78d1",
 			"key": "port",
 			"value": "5001",
 			"type": "string"
