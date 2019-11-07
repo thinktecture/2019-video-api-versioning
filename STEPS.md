@@ -38,8 +38,10 @@ English:
 Deutsch:
 
 1. ReportApiVersions anschalten, um Informationen zur Version auszugeben. 
+2. Versionsauswahl ändern auf Media Type.
 
 English:
 
 1. Enable reporting of api versions.
-   
+2. Change version selection to media type selector.
+ 
