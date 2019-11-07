@@ -19,6 +19,10 @@ dotnet add package Microsoft.AspNetCore.Mvc.Versioning -v 4.0.0
 
 1. Versionierungs-Funktionalität zum Startup hinzugefügt und dem Standard-Controller über ein Attribut die Version 1.0 zugewiesen.
 2. Zwei neue Beispiel-Controller hinzugefügt mit einem versionierten Endpunkt. 
+3. Neuer Controller mit zwei unterschiedlichen Versionen des gleichen Endpunkts hinzugefügt.
+
 
 1. Added versioning functionality to startup and used an attribute to assign version 1.0 to the default controller.
 2. Added two new Sample controllers with versioned endpoints.
+3. Added a new controller with two different versions of the same endpoint.
+
