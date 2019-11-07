@@ -39,9 +39,13 @@ Deutsch:
 
 1. ReportApiVersions anschalten, um Informationen zur Version auszugeben. 
 2. Versionsauswahl ändern auf Media Type.
+3. Versionsauswahl auf URL Pfad ändern.
+4. Eine Version als veraltet markieren.
 
 English:
 
 1. Enable reporting of api versions.
 2. Change version selection to media type selector.
+3. Change version selection to url path segment.
+4. Mark a version as deprecated.
  
