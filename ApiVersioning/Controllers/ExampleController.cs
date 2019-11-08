@@ -5,7 +5,7 @@ namespace ApiVersioning
 	[ApiVersion("1.0")]
 	[ApiVersion("2.0")]
 	[ApiController]
-	[Route("api/v{version:apiVersion}/[controller]")]
+	[Route("[controller]")]
 	public class ExampleController : ControllerBase
 	{
 		[MapToApiVersion("1.0")]

@@ -4,7 +4,7 @@ namespace ApiVersioning
 {
 	[ApiVersion("1.0")]
 	[ApiController]
-	[Route("api/v{version:apiVersion}/[controller]")]
+	[Route("[controller]")]
 	public class SampleController : ControllerBase
 	{
 		[HttpGet]
@@ -16,7 +16,7 @@ namespace ApiVersioning
 
 	[ApiVersion("2.0")]
 	[ApiController]
-	[Route("api/v{version:apiVersion}/Sample")]
+	[Route("Sample")]
 	public class Sample2Controller : ControllerBase
 	{
 		[HttpGet]
