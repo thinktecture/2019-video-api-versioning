@@ -54,7 +54,10 @@ English:
 Deutsch:
 
 1. Standard-Version hinzufügen und WeatherForecast Controller in einen unversionierten Zustand zurück bringen.
+2. Endpunkt aus der Versionierung ausnehmen.
 
 English:
 
 1. Add default api version and revert WeatherForecast Controller to state without versioning.
+2. Exclude endpoint from versioning.
+   
