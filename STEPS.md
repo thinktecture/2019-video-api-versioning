@@ -48,4 +48,13 @@ English:
 2. Change version selection to media type selector.
 3. Change version selection to url path segment.
 4. Mark a version as deprecated.
- 
+
+## Branch advanced-customizations
+
+Deutsch:
+
+1. Standard-Version hinzufügen und WeatherForecast Controller in einen unversionierten Zustand zurück bringen.
+
+English:
+
+1. Add default api version and revert WeatherForecast Controller to state without versioning.
